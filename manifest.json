@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "Test",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "storage",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "*://*.youtube.com/*"
+    ],
+    "optional_permissions": [
+        "*://*.youtube.com/*"
+    ],
+    "background": {
+        "scripts": [
+            "main.js"
+        ]
+    },
+    "action": {
+        "default_icon": "icons/beasts-32.png",
+        "default_title": "Beastify",
+        "default_popup": "options/options.html"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+    
+}
